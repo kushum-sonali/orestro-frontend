@@ -7,7 +7,9 @@ import React from "react";
 function CardsDetailes() {
 return(
     <>
-    <h1>cards details</h1>
+    <h1
+     style={{color:'black',top:'90vh',position:'absolute'}}
+    >cards details</h1>
     </>
 )
 }

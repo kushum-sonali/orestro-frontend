@@ -22,12 +22,11 @@ function NavBar() {
   const dispatch = useDispatch();
   const [price, setPrice] = useState(0);
   const cart = useSelector((state) => state.cart);
-  const {user} = useSelector((state)=> state.user);
+  const {user} = useSelector((state) => state.user);
   console.log(user)
   const navigate = useNavigate();
   const handleLogout = () => {
-    dispatch(logout())
-    localStorage.clear();
+    dispatch(logout(null));
     toast.success('LOGOUT SUCCESS')
     navigate('/login');
   };

@@ -20,7 +20,6 @@
   font-family: 'Times New Roman';
   font-weight: bolder;
   font-size: 25px;
-
 }
 .logo{
 color: red;
@@ -31,10 +30,15 @@ font-weight: bolder;
   text-decoration: none;
 }
 .nav-item:hover{
-  color: #000;
   background-color: blue;
-  border-radius: 5px;
+  height: max-content;
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+  font-weight: bolder;
+
 }
+ 
 .color-yb{
   background: #f4b41a;
   border:5px solid rgb(17,205,206);
