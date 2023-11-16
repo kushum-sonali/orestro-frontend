@@ -9,6 +9,8 @@ import { login } from "../store/UserSlice";
 import { themeContext } from "../themeProvider";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
+import Forgetpass from "./Forgetpass";
+import axios from "axios";
 function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -30,34 +32,31 @@ function Login() {
     }
     const collectdata = async () => {
         try {
-            const result = await fetch("http://localhost:5000/login", {
-                method: "POST",
-                body: JSON.stringify({
-                    email: email,
-                    password: password
-                }),
-                headers: {
-                    "Content-Type": "application/json",
-                    "Accept": "application/json"
-                },
+            const result = await axios.post("http://localhost:5000/login", {
+                email: email,
+                password: password
+            },{
+                headers:{
+                    "Content-Type":"application/json"
+                }
+
+
             });
-            const data = await result.json();
-            console.log(data)
-            localStorage.setItem("User", JSON.stringify(data.token));
-            dispatch(login(data.token));            
-            if(result.status==400 || !data){
-                toast.error('Invalid Credentials')
-            }
-            else {
-           
-                toast.success('lOGIN SUCCESS')
-               
-                navigate('/homepage')
-            }
-            
+            console.log(result.data);   
+            dispatch(login(result.data));
+            navigate("/homepage");
+            toast.success("login successfully")
         }
+
+
         catch (err) {
             console.log(err);
+            if(err.response.status==401){
+                toast.error(err.response.data)
+            }
+            else{
+                toast.error("something went wrong")
+            }
         }
     }
 
@@ -65,13 +64,14 @@ function Login() {
 
     return (
         <>
-            <div className="text-center center-div main" id="login">
-                <div className="container border py-5" id={theme == 'dark'? 'dark ':''}>
+        <form >
+            <div className=" main" id="login">
+               <div className="container">
                     <div className="title pb-5">
                         <h2 ><strong>Login Here</strong> </h2>
                         <span>Log in for existing users</span>
                     </div>
-                    <form >
+                    
                         <div className="form-group">
                             <i className="fa-solid fa-envelope"></i>
                             <input type="email" name="email" id="email" placeholder="Enter Email address" className="form-control p-3" onChange={handlChange} />
@@ -79,7 +79,9 @@ function Login() {
                         </div>
                         <div className="form-group">
                             <i className="fa-solid fa-lock"></i>
-                            <input type="password" name="password" id="password" placeholder="Enter your Password" className="form-control my-3 p-3" onChange={handlChange} />
+                            <input type="password" name="password" id="password" placeholder="Enter your Password" className="form-control my-3 p-3" 
+                            autoComplete="on"
+                            onChange={handlChange} />
 
                         </div>
                         <div>
@@ -93,13 +95,20 @@ function Login() {
                             >Login</button>
                         </div>
                         <div className="footer">
-                            <Link to="/" className="linnk">forget password ?</Link>
-                            <Link to="/Signup" className="linnk">Register account!</Link>
+                            <Link to="/" className="linnk"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                navigate("/forgetpass");
+                            }
+                            }
+                            >forget password? </Link>
+                            <Link to="/Signup" className="linnk"> Register account!</Link>
 
                         </div>
-                    </form>
-                </div>
+                        </div>
+            
             </div>
+            </form>
         </>
     );
 }

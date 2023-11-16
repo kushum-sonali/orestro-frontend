@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Route, Routes, Link, NavLink } from 'react-router-dom';
 import './Navbar.css'
-
 import jwt_decode from "jwt-decode";
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -15,7 +14,7 @@ import { removeFromCart } from '../store/CartSlice';
 import Menu from '@mui/material/Menu';
 import { Table } from '@mui/material';
 import { logout } from '../store/UserSlice'
-
+import { Button } from '@mui/material';
 function NavBar() {
   const [decoded, setDecoded] = useState({});
   const { state } = useAuth();
@@ -30,11 +29,9 @@ function NavBar() {
     toast.success('LOGOUT SUCCESS')
     navigate('/login');
   };
-
   useEffect(() => {
-    const token = localStorage.getItem("User");
-    if (token && user){
-      var decode = jwt_decode(token);
+    if (user){
+      var decode = jwt_decode(user.token);
       setDecoded(decode);
       console.log(decode);
     }
@@ -72,9 +69,8 @@ function NavBar() {
 
   return (
     <>
-      <header>
-        <nav className="navbar navbar-expand-lg navbar-light bg-dark p-3 fixed-top text-color-white">
-          <div className="container-fluid text-white h4 ">
+        <nav className="navbar navbar-expand-lg navbar-light bg-dark sticky-top  text-color-white">
+          <div className="container-fluid text-white   " >
             <a className="navbar-brand text-white " href="#"><div className='color-yb circle center-txt'>OMR</div></a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
@@ -82,9 +78,7 @@ function NavBar() {
             <div className="collapse navbar-collapse nav-div" id="navbarSupportedContent">
               <ul className="navbar-nav ms-auto h5 nav-ul" >
 
-                <li className="nav-item">
-                  <Link to={'/'}><span className="nav-link active text-white" aria-current="page">Home</span></Link>
-                </li>
+                
                 {!user ? (
                   <>
                     <li className="nav-item">
@@ -96,6 +90,9 @@ function NavBar() {
                   </>
                 ) : (
                   <>
+                  <li className="nav-item">
+                  <Link to={'/homepage'}><span className="nav-link active text-white" aria-current="page">Home</span></Link>
+                </li>
                     <li className="nav-item">
                       <Link to={'/about'}><span className="nav-link active text-white" aria-current="page">About</span></Link>
                     </li>
@@ -203,13 +200,15 @@ function NavBar() {
 
                     <li className="nav-item dropdown">
                       <a className="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        {localStorage.getItem("User") ? decoded.name : ""}
-
-
+                        {decoded?.name}
                       </a>
                       <ul className="dropdown-menu ">
-                        <li><span> </span></li>
-                        <li className='text-center'><button className="logout" onClick={handleLogout}>Logout</button></li>
+                        <li><button className="btn btn-danger logout2" onClick={
+                          (e) => {
+                            e.preventDefault();
+                            handleLogout();
+                          }
+                        }>Logout</button></li>
                         <li><hr className="dropdown-divider" /></li>
 
                       </ul>
@@ -221,7 +220,6 @@ function NavBar() {
             </div>
           </div>
         </nav>
-      </header>
     </>
   )
 }

@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+.forget-main{
+    background-image: url("https://media.istockphoto.com/id/1271787791/photo/login-and-password-cyber-security-concept-data-protection-and-secured-internet-access.webp?b=1&s=170667a&w=0&k=20&c=Avq7ejzgxbLml4napHVXC0Ao_ZA5YUUqv7NUBU6ndN8=");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 85vh !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.forget-head{
+    margin-top: 10px;
+    font-weight: bolder;
+}
+.forget-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid white;
+    /* height:max-content; */
+    /* padding: 10px; */
+    width: 25vw;
+    background-color: rgba(41,53,49,0.9);
+    color:white;
+    font-family:  'Times New Roman', Times, serif;
+    /* border-radius: 10%; */
+}
+.forget-container:hover{
+    transform:translate(0px, -10px);
+    transition: 0.8s ease-in-out;
+}
+.forget-btn{
+   height: 5vh;
+    width: 20vw;
+}

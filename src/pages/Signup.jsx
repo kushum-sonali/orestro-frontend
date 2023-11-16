@@ -3,6 +3,7 @@ import "./Signup.css"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
+import { Link } from "react-router-dom";
 
 function Signup() {
     
@@ -101,8 +102,8 @@ function Signup() {
     return (
         <>
             <form method="POST">
-                <div className="text-center center-div main " id="login ">
-                    <div className="container   border  ">
+                <div className=" main " id="login ">
+                    <div className="container ">
                         <div className="title pb-5">
                             <h2 className=""><strong>Signup Here </strong></h2>
                             <span>Sign in for New users</span>
@@ -138,6 +139,14 @@ function Signup() {
                             {formErrors.password > 0 && (
                                 <span className="errorMessage">{formErrors.password}</span>
                             )}
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    Do you have an account? <Link to="/login">Login</Link>
+                                </p>
+
+                            </div>
                         </div>
                         <div>
                             {/* <input type="submit" value="Login" className="btn btn-block btn-primary p-2"> */}

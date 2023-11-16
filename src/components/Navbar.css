@@ -47,6 +47,113 @@
      height: 40vh;
     width: 10vw;
   }
+  .navbar{
+    background-color: #817a19;
+    padding: 10px;
+    width: 100%;
+ 
+    z-index: 1;
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='1em' viewBox='0 0 512 512'%3E%3Cstyle%3Esvg%7Bfill:%23fafafa%7D%3C/style%3E%3Cpath d='M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM64 256c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z'/%3E%3C/svg%3E") !important;
+    --bs-navbar-toggler-border-color: #fafafa !important;
+    --bs-nav-link-padding-y:0px !important;
+}
+ .navbar-nav{
+  --bs-nav-link-padding-y:0px !important;
+ }
+.nav-item{
+  margin: 0 10px;
+  padding: 0 !important;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Times New Roman';
+  font-weight: bolder;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.logo{
+color: red;
+font-family: 'Times New Roman';
+font-weight: bolder;
+}
+.nav-item a{
+  text-decoration: none;
+}
+.nav-item:hover{
+  background-color: blue;
+
+  border-radius: 10px;
+  /* padding: 10px; */
+  color: #fff;
+  font-weight: bolder;
+
+}
+ 
+.color-yb{
+  background: #f4b41a;
+  border:5px solid rgb(17,205,206);
+  color: #143d59;
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: 'Times New Roman';
+}
+.circle{
+  width: 90px;
+height: 70px;
+  border-radius: 50%;
+  background:rgb(235,118,31);
+  border:10px solid rgb(242,252,254);
+}
+.circle:hover{
+  background: #143d59;
+  background: #fff;
+  color: #f4b41a;
+}
+.center-txt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.emptycart_img{
+  margin-right: 50px;
+}
+.logout1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(172, 172, 227);
+  border-radius: 10px;
+  font-family: 'Times New Roman';
+  border: 1px solid white;
+  
+}
+.logout2{
+border: 1px solid white;
+height:max-content;
+padding: 10px;
+width: 10vw;
+  background-color:rgba(41,53,49,0.9);
+  color:white;
+  font-family:  'Times New Roman', Times, serif;
+ border-radius: 10%;
+}
+/* .logout2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  background: rgb(172, 172, 227);
+  border-radius: 10px;
+  font-family: 'Times New Roman';
+  font-weight: bolder;
+} */
+button:hover{
+  background: rgb(17,205,206);
+  color: #fff;
+  font-weight: bolder;
+}
   
   @media (max-width:772px){
       .iteamsdetails{

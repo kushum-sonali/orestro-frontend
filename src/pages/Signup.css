@@ -1,40 +1,38 @@
 *body{
   margin: 0;
   padding: 0;
+  font-family:  'Times New Roman', Times, serif;
+
+  box-sizing: border-box ;
 }
-.main{
-    display: flex;
+.main {
+
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 97vh;
-  width: 100vw;
-  background-color: rgba(41,53,49,0.9);
-    background-image: url("https://media.istockphoto.com/id/588593818/photo/green-lettuce-leaves.webp?b=1&s=170667a&w=0&k=20&c=baWR0pvQKf3w1KVBeBHGVCcUQzy9SVFaNxyut81Fpls=");
-    background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
+  min-height: 84vh !important;
+  background-image: url("https://plus.unsplash.com/premium_photo-1683122042252-4484df5db16f?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2hlZiUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D");
+  background-repeat: no-repeat;
+  background-size: cover;
   }
-  .center-div{
-  font-family:  'Times New Roman', Times, serif;
-  /* font-size: 200%; */
-  
-  }
- 
   .container{
-    margin-top: 10%;
+    margin-top: 4%;
     display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 70vh;
+  border: 1px solid white;
+  height:max-content;
+  padding: 10px;
   width: 25vw;
     background-color:rgba(41,53,49,0.9);
     color:white;
     font-family:  'Times New Roman', Times, serif;
    border-radius: 10%;
-   
-   
-    
+  }
+  .container:hover{
+     transform:translate(0px, -10px);
+      transition: 0.8s ease-in-out;
   }
   .btn.btn-success{
     padding: 4em 2em;
@@ -46,7 +44,6 @@
     display: flex;
   justify-content: flex-start;
   align-items: center;
-  /* padding: 25PX; */
   font-size: 25px;
   margin-right: 10px;
   }
@@ -60,6 +57,7 @@
     display: flex;
   margin-top: 3vh;
     justify-content: space-between;
+    gap: 10px;
       
   }
   .linnk{
@@ -82,18 +80,13 @@
   @media screen and (max-width: 900px ) {
     .container{
       width: max-content;
-      margin-top: 20%;
-      margin-left: 10%;
-      margin-right: 10%;
-      margin-bottom: 10%;
-      height: 65vh;
-      /* width:100%; */
+      height: max-content;
+      /* padding: 10px;
       font-size: 10px;
-      padding: 0.3em;
       border-radius: 10%;
       background-color:rgba(41,53,49,0.9);
       color:white;
-      font-family:  'Times New Roman', Times, serif;
+      font-family:  'Times New Roman', Times, serif; */
     }
     #dark{
       background-color: black !important;
@@ -105,7 +98,6 @@
       display: flex;
     justify-content: flex-start;
     align-items: center;
-    /* padding: 25PX; */
     font-size: 15px;
     margin-right: 10px;
     }
@@ -117,8 +109,8 @@
     }
     .footer{
       display: flex;
-    margin-top: 3vh;
       justify-content: space-between;
+      gap: 10px;
         
     }
     .linnk{

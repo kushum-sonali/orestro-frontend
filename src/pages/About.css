@@ -1,0 +1,126 @@
+* body{
+    margin: 0;
+    padding: 0;
+ 
+    box-sizing: border-box;
+}
+.about-main{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://media.istockphoto.com/id/1165263525/photo/pizza-cooking-ingredients-and-empty-space-for-recipe.webp?b=1&s=170667a&w=0&k=20&c=NOXA9hVMnXHV05PwWniZzs2vAZy5Gnp6wYx4WgdnyA4=");
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    /* height: 82vh !important; */
+    text-align: center;
+}
+.about-title{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 3vw;
+    color: rgb(148,63,20);
+    -webkit-text-stroke: 0.3vw white;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.about-container{
+    font-family: 'Times New Roman', Times, serif;
+    font: bold;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid white;
+  height:30vh;
+  padding: 10px;
+  width: 50vw;
+    background-color:rgba(41,53,49,0.9);
+    color:white;
+    font-family:  'Times New Roman', Times, serif;
+   border-radius: 10px;
+  }
+  .about-container:hover{
+     transform:translate(0px, -10px);
+      transition: 0.8s ease-in-out;
+  }
+
+
+.image-1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    /* padding: 0 10%; */
+    transition : 0.8s ease-in-out;
+}
+.image-1 img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    
+}
+.image-1:hover{
+    transform:translate(0px, -10px);
+}
+.image-2{
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* flex-direction: column; */
+    text-align: center;
+    padding: 10px;
+    gap: 20px;
+    transition : 0.8s ease-in-out;
+
+    
+}
+.image-2 img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+.image-2:hover{
+    transform:translate(0px, 10px);
+}
+.chef-1{
+    width: 90%;
+    height:35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.chef-1 img{
+    width:250px;
+    height:250px;
+    border-radius: 50%;
+}
+.chef-2{
+    width: 90%;
+    height:35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.chef-2 img{
+    width:250px;
+    height:250px;
+    border-radius: 50%;
+}
+button{
+     background-color: rgb(242,62,121);
+}
+@media screen and (max-width: 696px){
+    .about-container{
+        height:max-content;
+        display: flex;
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }
+} 

@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contact-main1{
+    min-height: 85vh !important;
+    background-image: url("https://media.istockphoto.com/id/1049658692/photo/contact-us.webp?b=1&s=170667a&w=0&k=20&c=7L7Dm1XJEwf2HdeGtK5jv6Y5XeBKSTWgkGrjhWskWX8=");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.contact-heading{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 5vw;
+    color: rgb(148,63,20);
+    -webkit-text-stroke: 0.3vw white;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.contact-main2{
+
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+
+}
+.demo{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  font-size: 25px;
+  height:max-content;
+  padding: 10px;
+  width: 25vw;
+  gap: 20px;
+ background-color:rgba(41,53,49,0.9);
+    color:white;
+    font-family:  'Times New Roman', Times, serif;
+   border-radius: 10%;
+}
