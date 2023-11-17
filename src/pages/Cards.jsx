@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import "./Style.css";
 import Cardsdata from "../components/Addtocart/Cardsdata";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
