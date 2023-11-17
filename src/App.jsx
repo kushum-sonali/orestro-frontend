@@ -5,7 +5,7 @@ import Navbar from './components/Navbar'
 import { Route, Router, Routes } from 'react-router-dom'
 import { AuthProvider } from './components/Authcontext' 
 import { useContext } from 'react'
-import { themeContext } from './ThemeProvider'
+
 import { Provider } from 'react-redux'
 import Store from './store/Store'
 import { ToastContainer, toast } from 'react-toastify';
@@ -56,7 +56,7 @@ theme="colored"
   );
 }
 const App=()=>{
-  const { theme, toggleTheme } = useContext(themeContext)
+  
 
   
 return (
