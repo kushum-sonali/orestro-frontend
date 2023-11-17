@@ -6,7 +6,7 @@ import { useState,useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../components/Authcontext";
 import { login } from "../store/UserSlice";
-import { themeContext } from "../themeProvider";
+import { themeContext } from "../ThemeProvider";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import Forgetpass from "./Forgetpass";
