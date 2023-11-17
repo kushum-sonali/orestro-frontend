@@ -71,7 +71,7 @@ function Signup() {
     const collectdata = async () => {
         try {
             console.log(username, phone, email, password);
-            const result = await fetch("http://localhost:5000/signup", {
+            const result = await fetch("https://orestro-backend.vercel.app/signup", {
                 method: "POST",
                 body: JSON.stringify({
                     username: username,

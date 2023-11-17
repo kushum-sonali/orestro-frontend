@@ -22,7 +22,7 @@ function ResetPassword(){
     }
     const collectdata=async()=>{
         try{
-            const result=await axios.post(`http://localhost:5000/reset-password/${id}/${token}`,{
+            const result=await axios.post(`https://orestro-backend.vercel.app/reset-password/${id}/${token}`,{
                 password:password,
             },{
                 headers:{

@@ -16,7 +16,7 @@ function Forgetpass(){
     }
     const collectdata=async()=>{
         try{
-            const result=await axios.post("http://localhost:5000/forgetpass",{
+            const result=await axios.post("https://orestro-backend.vercel.app/forgetpass",{
                 email:email
             },{
                 headers:{
