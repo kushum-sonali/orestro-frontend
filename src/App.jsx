@@ -2,6 +2,7 @@ import { useReducer, useState } from 'react'
 
 import './App.css'
 import Navbar from './components/Navbar'
+import Footer from './pages/Footer'
 import { Route, Router, Routes } from 'react-router-dom'
 import { AuthProvider } from './components/Authcontext' 
 import { useContext } from 'react'
@@ -11,6 +12,7 @@ import Store from './store/Store'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {lazy,Suspense} from 'react'
+// const Footer=lazy(()=>import('./pages/Footer'));
 const Signup=lazy(()=>import('./pages/Signup'))
 const Login= lazy(()=>import('./pages/Login'));
 const Homepage=lazy(()=>import('./pages/Homepage'));
@@ -65,6 +67,7 @@ return (
       <Provider store={Store}>
       <Navbar />
   <Routing/> 
+  <Footer/>
   {/* <About/>
      <Cards/>
       <Contact/> */} 

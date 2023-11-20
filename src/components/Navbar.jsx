@@ -15,6 +15,7 @@ import Menu from '@mui/material/Menu';
 import { Table } from '@mui/material';
 import { logout } from '../store/UserSlice'
 import { Button } from '@mui/material';
+import Footer from '../pages/Footer';
 function NavBar() {
   const [decoded, setDecoded] = useState({});
   const { state } = useAuth();
@@ -26,6 +27,7 @@ function NavBar() {
   const navigate = useNavigate();
   const handleLogout = () => {
     dispatch(logout(null));
+    localStorage.removeItem('User');
     toast.success('LOGOUT SUCCESS')
     navigate('/login');
   };
@@ -102,7 +104,8 @@ function NavBar() {
                     <li className="nav-item">
                       <Link to={'/menu'}><span className="nav-link active text-white" aria-current="page">Menu</span></Link>
                     </li>
-
+                   
+                   
                     <li className="nav-item">
                       <Link to={'/menu/cart'} ><span className="nav-link active text-white" aria-current="page" >
                      

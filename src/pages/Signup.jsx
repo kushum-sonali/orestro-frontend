@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 import { Link } from "react-router-dom";
-
+import { useSelector } from "react-redux";
 function Signup() {
     
     const [username, setUsername] = useState("");
@@ -19,7 +19,8 @@ function Signup() {
 
     });
     const navigate = useNavigate();
-
+    const {user} = useSelector((state) => state.user);
+    console.log(user)
     const isValidate = (errors) => {
         let valid = true;
         const error = {};
@@ -45,10 +46,10 @@ function Signup() {
     }
 
     useEffect(() => {
-        if (localStorage.getItem("User")) {
-            navigate('/login')
+        if (user) {
+            navigate('/homepage');
         }
-    }, [])
+    }, [user]);
     const handlChange = (e) => {
         e.preventDefault();
         const name = e.target.name;
