@@ -4,6 +4,7 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import ContactCover from "../Animation/Contactcover";
 import Footer from "./Footer";
 import axios from "axios";
+import { toast } from "react-toastify";
 function Contact() {
     const [data,setData]=useState({});
 
@@ -28,12 +29,12 @@ function Contact() {
         
         const res=await axios.post("http://localhost:5000/message",data);
         if(res.status===200){
-            alert("Message sent successfully")
+           toast.success("Thanks for your feedback :)")
         }
         else{
             alert("Message not sent")
         }
-        
+
     }
 
     return(<>
