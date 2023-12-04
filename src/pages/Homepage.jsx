@@ -6,6 +6,7 @@ import store from "../store/Store";
 import Cards from "./Cards";
 import About from "./About";
 import Contact from "./Contact";
+import Footer from "./Footer";
 import { ToastContainer, toast } from 'react-toastify';
 import { useNavigate } from "react-router-dom";
 import { lazy,Suspense} from 'react'
@@ -54,7 +55,12 @@ style={{
 <Cards/>
 
 </Provider>
+<div className="container-fluid">
 <Contact/>
+</div>
+<div className="container-fluid">
+  <Footer/>
+</div>
 
 </div>
 

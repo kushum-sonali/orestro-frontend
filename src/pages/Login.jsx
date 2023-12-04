@@ -93,7 +93,7 @@ function Login() {
 
                             >Login</button>
                         </div>
-                        <div className="footer">
+                        <div className="footer-login">
                             <Link to="/" className="linnk"
                             onClick={(e) => {
                                 e.preventDefault();

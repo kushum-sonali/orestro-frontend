@@ -36,13 +36,31 @@ const cartSlice = createSlice({
                 carts:data
             }
         }
+    },
+    addone : (state, action) => {
+        const IteamsIndex_add = state.carts.findIndex((iteam)=> iteam.id===action.payload.id);
+        if(state.carts[IteamsIndex_add].qnty >=1){
+         const dltitem = state.carts[IteamsIndex_add].qnty+=1;
+            return{
+                ...state,
+                carts:[...state.carts]
+              } 
+        }
+        else if(state.carts[IteamsIndex_add].qnty ===1){
+            const data= state.carts.filter((el)=>el.id != action.payload.id);
+            return {
+                ...state,
+                carts:data
+            }
+        }
     }
+
   },
 });
 
 
 
-export const { addToCart, removeFromCart,removeone } = cartSlice.actions;
+export const { addToCart, removeFromCart,removeone,addone } = cartSlice.actions;
 export const selectCart = (state) => state.cart;
 export default cartSlice.reducer;
 

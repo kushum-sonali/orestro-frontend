@@ -67,7 +67,7 @@ return (
       <Provider store={Store}>
       <Navbar />
   <Routing/> 
-  <Footer/>
+  {/* <Footer/> */}
   {/* <About/>
      <Cards/>
       <Contact/> */} 

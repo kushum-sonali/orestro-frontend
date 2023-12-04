@@ -1,0 +1,10 @@
+.detailes-title{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 3vw;
+    color: rgb(148,63,20);
+    /* -webkit-text-stroke: 0.3vw black; */
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}

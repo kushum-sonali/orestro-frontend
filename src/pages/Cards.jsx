@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../store/CartSlice";
 import store from "../store/Store";
+import Footer from "./Footer";
 import "./Contact.css"
 import { useSelector } from "react-redux";
 function Cards() {
@@ -44,6 +45,7 @@ return (
   }
 </div>
 </div>
+
 </>
     );
 };
