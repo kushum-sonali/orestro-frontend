@@ -22,6 +22,7 @@ const Contact=lazy(()=>import('./pages/Contact'));
 const CardsDetailes=lazy(()=>import('./components/Addtocart/CardDetailes'));
 const Forgetpass=lazy(()=>import('./pages/Forgetpass'));
 const ResetPassword=lazy(()=>import('./pages/ResetPassword'));
+// const Formpage=lazy(()=>import('./components/Addtocart/Formpage'));
 
 
 const Routing=()=>{
@@ -40,6 +41,7 @@ const Routing=()=>{
   <Route path='/forgetpass' element={<Suspense><Forgetpass/></Suspense>}></Route>
   <Route path='/reset-password/:id/:token' element={<Suspense><ResetPassword/></Suspense>}></Route>
   <Route path='*' element={<Suspense><Homepage/></Suspense>}></Route>
+  {/* <Route path='/formpage' element={<Suspense><Formpage/></Suspense>}></Route> */}
 
  </Routes>
  <ToastContainer

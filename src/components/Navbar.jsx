@@ -67,7 +67,9 @@ function NavBar() {
       padding: '0 4px',
     },
   }));
-
+const formpage=()=>{
+  navigate('/formpage');
+}
 
   return (
     <>
@@ -154,7 +156,7 @@ function NavBar() {
                                             </td>
                                             <td>
                                               <p>{e.rname}</p>
-                                              <p> quatity : {e.quantity}</p>
+                                              <p> quantity : {e.quantity}</p>
                                               <p> price :₹{e.price * e.quantity}</p>
                                               <p > <i className="fas fa-trash smalltrash" style={{ color: "red", fontSize: 20, cursor: "pointer" }} onClick={(event) => { event.preventDefault(); dlt(e.id) }}></i></p>
 
@@ -172,7 +174,9 @@ function NavBar() {
                                     <td colSpan="3">
                                       <div className="d-flex justify-content-between align-items-center">
                                         <p>Total Price : ₹{total()}</p>
-                                        <button className="btn btn-primary" onClick={handleClose}>Checkout</button>
+                                        <Button variant="contained" color="success" 
+                                        >
+                                          Order Now</Button>
                                       </div>
                                     </td>
                                   </tr>
